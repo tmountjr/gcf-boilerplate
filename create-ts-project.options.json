@@ -1,0 +1,9 @@
+{
+  "questions": [
+    {
+      "name": "gcpFunctionName",
+      "type": "input",
+      "message": "GCP Function Name:"
+    }
+  ]
+}
