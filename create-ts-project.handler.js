@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import { promisify } from 'util'
+const fs = require('fs')
+const path = require('path')
+const promisify = require('util').promisify
 
 const writeFile = promisify(fs.writeFile)
 
@@ -11,6 +11,7 @@ exports.questions = [
     message: 'GCP Function Name:'
   }
 ]
+
 exports.apply = async (options) => {
   let packageJson = require('./package.json')
   packageJson.name = path.basename(options.projectDir)
